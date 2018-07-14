@@ -1,12 +1,5 @@
-const {ObjectID} = require('mongodb');
 const MongoClinet = require('mongodb').MongoClient;
 const {ObjectID} = require('mongodb');
-
-var id = '5b45a804a9fa9a1030e2db4511';
-
-if(!ObjectID.isValid(id)) {
-  console.log('ID not valid');
-}
 
 MongoClinet.connect('mongodb://localhost:27017/TodoApp',(err, db)=>{
   if(err) {
