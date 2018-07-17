@@ -1,3 +1,4 @@
+require(./config/config);
 const _ = require('lodash');
 
 const express = require('express');
@@ -77,7 +78,6 @@ app.patch('/todos/:id', (req,res)=>{
       return res.status(404).send();
   }
 
-  console.log(body.completed);
   if(_.isBoolean(body.completed) && body.completed) {
     body.completedAt = new Date().getTime();
   }else {
